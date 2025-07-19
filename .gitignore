@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Migrations
+migrations/__pycache__/
+
+# Others
+*.swp
+*.swo
+
+# Yarn
+yarn.lock
+
+# npm
+package-lock.json
