@@ -18,4 +18,4 @@ class SummarySerializer(serializers.Serializer):
 class SummaryHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SummaryHistory
-        fields = ['input_text', 'summary_text', 'created_at']
+        fields = ['id', 'input_text', 'summary_text', 'created_at']

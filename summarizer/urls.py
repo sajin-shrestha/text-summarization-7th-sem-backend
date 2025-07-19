@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RegisterView, SummarizeView, HistoryView
+from .views import RegisterView, SummarizeView, HistoryView, HistoryDetailView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('summarize/', SummarizeView.as_view(), name='summarize'),
     path('history/', HistoryView.as_view(), name='history'),
+    path('history/<int:pk>/', HistoryDetailView.as_view(), name='history-detail'),
 ]
