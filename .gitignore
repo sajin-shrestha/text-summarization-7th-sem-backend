@@ -41,3 +41,7 @@ yarn.lock
 
 # npm
 package-lock.json
+
+# Custom
+custom_trained_modal/
+extracted_datasets/

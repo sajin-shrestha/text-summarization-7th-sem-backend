@@ -1,0 +1,13 @@
+Metric,Score
+Length_Predicted,38.0
+Length_Actual,26.0
+Cosine_Similarity,0.159
+ROUGE-1,0.097
+ROUGE-2,0.0
+ROUGE-L,0.097
+BLEU,0.005
+Word_Overlap_Ratio,0.087
+Precision,0.074
+Recall,0.087
+F1,0.08
+Accuracy,0.042
