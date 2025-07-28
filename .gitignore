@@ -28,6 +28,7 @@ node_modules/
 
 # Environment
 .env
+venv
 
 # Migrations
 migrations/__pycache__/
@@ -42,6 +43,7 @@ yarn.lock
 # npm
 package-lock.json
 
-# Custom
-custom_trained_modal/
-extracted_datasets/
+# custom
+custom-trained-modal-final/
+summarization_metrics/
+
