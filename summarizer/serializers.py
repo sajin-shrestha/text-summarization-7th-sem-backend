@@ -26,3 +26,8 @@ class SummaryHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SummaryHistory
         fields = ['id', 'input_text', 'summary_text', 'created_at']
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserProfile
+        fields = ['bio', 'avatar', 'other_fields']

@@ -120,3 +120,17 @@ class DownloadSummaryPDFView(APIView):
         response = HttpResponse(buffer, content_type='application/pdf')
         response['Content-Disposition'] = f'attachment; filename="summary_{pk}.pdf"'
         return response
+
+class ProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        serializer = UserProfileSerializer(request.user.profile)
+        return Response(serializer.data)
+
+    def put(self, request):
+        serializer = UserProfileSerializer(request.user.profile, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=400)

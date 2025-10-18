@@ -29,4 +29,6 @@ class SummaryHistory(models.Model):
         # Keep only the last 5 summaries for the user
         summaries = SummaryHistory.objects.filter(user=self.user).order_by('-created_at')
         if summaries.count() > 5:
-            summaries[5:].delete()
+            # delete everything except the latest 5
+            ids_to_keep = summaries.values_list('id', flat=True)[:5]
+            SummaryHistory.objects.filter(user=self.user).exclude(id__in=ids_to_keep).delete()
